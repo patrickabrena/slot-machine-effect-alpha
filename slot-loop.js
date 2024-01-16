@@ -8,7 +8,10 @@
     - make it so that it activates on click
     - Possibly usee javascript es6 promise to offset the slot machine effect
  */
-
+//
+//
+//
+/*Test Code 1 */
 const img_looping_effect = () => {
   const imageUrls = [
     "../test-rock-png/imgs/rock-final.png",
@@ -24,6 +27,7 @@ const img_looping_effect = () => {
     imageContainer = [firstbox, secondbox, thirdbox];
 
     const displayTime = 500;
+    const offsetTime = 150;
     //iterate through imageUrls Array
     for (let i = 0; i < imageUrls.length; i++) {
       setTimeout(() => {
@@ -36,6 +40,18 @@ const img_looping_effect = () => {
       }, i * displayTime);
     }
   };
-  window.onload = displayImages;
+  //create loop trigger on button click
+  const loopTrigger = document.getElementById("loop-trigger");
+  loopTrigger.onclick = displayImages;
+  //   window.onload = displayImages;
 };
 img_looping_effect();
+/*Test Code 1 */
+//
+//
+//
+//
+/*Test Code 2 */
+const img_looping_effect2 = () => {};
+img_looping_effect2();
+/*Test Code 2 */

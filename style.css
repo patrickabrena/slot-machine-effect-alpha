@@ -35,3 +35,8 @@ img {
   height: 80%;
   width: auto;
 }
+
+button {
+  padding: 0.7rem;
+  margin: 0;
+}
