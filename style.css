@@ -39,15 +39,19 @@ img {
   height: 80%;
   width: auto;
 }
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
 
 button {
   padding: 1%;
-  margin: 0;
+  margin: 1%;
 }
 
 @media screen and (max-width: 420px) {
   .box {
-    width: 30%;
-    padding: 30%;
+    width: 23%;
+    padding: 23%;
   }
 }

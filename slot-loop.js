@@ -174,8 +174,99 @@ document.addEventListener("DOMContentLoaded", function () {
 //
 //
 /*Test Code 4 */
+// document.addEventListener("DOMContentLoaded", function () {
+//   const img_looping_effect4 = () => {
+//     const firstbox = document.getElementById("box-first-child");
+//     const secondbox = document.getElementById("box-second-child");
+//     const thirdbox = document.getElementById("box-third-child");
+
+//     const imageContainer = [firstbox, secondbox, thirdbox];
+//     const offsetTimer = 150;
+
+//     const imageUrls = [
+//       "../slot-machine-effect-alpha/imgs/rock-final.png",
+//       "../slot-machine-effect-alpha/imgs/hand-final.png",
+//       "../slot-machine-effect-alpha/imgs/scissors-final.png",
+//     ];
+//     const displayTime = 100;
+//     const repeatForLoop = (targetIndex) => {
+//       for (let i = 0; i < imageContainer.length; i++) {
+//         const updatedDelay = offsetTimer * i;
+
+//         const numLoops = i + 5;
+//         const imgArrLength = imageUrls.length;
+//         // const targetIndex = 1;
+
+//         for (let j = 0; j < imgArrLength * numLoops; j++) {
+//           setTimeout(() => {
+//             const currentImageUrlIndex = j % imgArrLength;
+//             imageContainer[i].innerHTML = `<img src= "${
+//               imageUrls[(currentImageUrlIndex + targetIndex) % imgArrLength]
+//             }">`;
+//           }, j * displayTime + updatedDelay);
+//         }
+//       }
+//     };
+//     repeatForLoop(2);
+//   };
+
+//   const loopTrigger = document.getElementById("loop-trigger");
+//   loopTrigger.onclick = img_looping_effect4;
+// });
+/*Test Code 4 */
+//
+//
+//
+//
+/*Test Code 5 */
+// document.addEventListener("DOMContentLoaded", function () {
+//   const img_looping_effect5 = () => {
+//     const firstbox = document.getElementById("box-first-child");
+//     const secondbox = document.getElementById("box-second-child");
+//     const thirdbox = document.getElementById("box-third-child");
+
+//     const imageContainer = [firstbox, secondbox, thirdbox];
+//     const offsetTimer = 150;
+
+//     const imageUrls = [
+//       "../slot-machine-effect-alpha/imgs/rock-final.png",
+//       "../slot-machine-effect-alpha/imgs/hand-final.png",
+//       "../slot-machine-effect-alpha/imgs/scissors-final.png",
+//     ];
+//     const displayTime = 100;
+//     const repeatForLoop = (targetIndex) => {
+//       for (let i = 0; i < imageContainer.length; i++) {
+//         const updatedDelay = offsetTimer * i;
+
+//         const numLoops = i + 5;
+//         const imgArrLength = imageUrls.length;
+//         // const targetIndex = 1;
+
+//         for (let j = 0; j < imgArrLength * numLoops; j++) {
+//           setTimeout(() => {
+//             const currentImageUrlIndex = j % imgArrLength;
+//             imageContainer[i].innerHTML = `<img src= "${
+//               imageUrls[(currentImageUrlIndex + targetIndex) % imgArrLength]
+//             }">`;
+//           }, j * displayTime + updatedDelay);
+//         }
+//       }
+//     };
+//     repeatForLoop(targetIndex);
+//   };
+
+//   const loopTrigger = document.getElementById("loop-trigger");
+//   loopTrigger.onclick = img_looping_effect5 = () => {
+//     repeatForLoop(2);
+//   };
+// });
+/*Test Code 5 */
+//
+//
+//
+/*Test Code 6 */
 document.addEventListener("DOMContentLoaded", function () {
-  const img_looping_effect4 = () => {
+  const img_looping_effect5 = () => {
     const firstbox = document.getElementById("box-first-child");
     const secondbox = document.getElementById("box-second-child");
     const thirdbox = document.getElementById("box-third-child");
@@ -189,13 +280,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "../slot-machine-effect-alpha/imgs/scissors-final.png",
     ];
     const displayTime = 100;
-    const repeatForLoop = () => {
+
+    const repeatForLoop = (targetIndex) => {
       for (let i = 0; i < imageContainer.length; i++) {
         const updatedDelay = offsetTimer * i;
 
         const numLoops = i + 5;
         const imgArrLength = imageUrls.length;
-        const targetIndex = 1;
 
         for (let j = 0; j < imgArrLength * numLoops; j++) {
           setTimeout(() => {
@@ -207,14 +298,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     };
-    repeatForLoop();
+
+    const loopTriggerRock = document.getElementById("loop-trigger-rock");
+    const loopTriggerPaper = document.getElementById("loop-trigger-paper");
+    const loopTriggerScissors = document.getElementById(
+      "loop-trigger-scissors"
+    );
+    //
+    loopTriggerRock.onclick = () => {
+      repeatForLoop(1);
+    };
+    //
+    loopTriggerPaper.onclick = () => {
+      repeatForLoop(2);
+    };
+    //
+    loopTriggerScissors.onclick = () => {
+      repeatForLoop(3);
+    };
   };
 
-  const loopTrigger = document.getElementById("loop-trigger");
-  loopTrigger.onclick = img_looping_effect4;
+  img_looping_effect5(); // Call the function to set up the event handler
 });
-/*Test Code 4 */
-//
-//
-//
-//
+
+/*Test Code 6 */
