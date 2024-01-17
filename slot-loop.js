@@ -57,52 +57,52 @@ Without this document.addEventListener wrapper function, I was getting
 ReferenceError: document is not defined
 Probably caused by Javascript code being executed before the HTMLdpcument wasfully loaded
  */
-document.addEventListener("DOMContentLoaded", function () {
-  const img_looping_effect2 = () => {
-    const firstbox = document.getElementById("box-first-child");
-    const secondbox = document.getElementById("box-second-child");
-    const thirdbox = document.getElementById("box-third-child");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const img_looping_effect2 = () => {
+//     const firstbox = document.getElementById("box-first-child");
+//     const secondbox = document.getElementById("box-second-child");
+//     const thirdbox = document.getElementById("box-third-child");
 
-    const imageContainer = [firstbox, secondbox, thirdbox];
-    const offsetTimer = 150;
+//     const imageContainer = [firstbox, secondbox, thirdbox];
+//     const offsetTimer = 150;
 
-    const imageUrls = [
-      "../slot-machine-effect-alpha/imgs/rock-final.png",
-      "../slot-machine-effect-alpha/imgs/hand-final.png",
-      "../slot-machine-effect-alpha/imgs/scissors-final.png",
-    ];
-    const displayTime = 100;
-    const repeatForLoop = () => {
-      for (let i = 0; i < imageContainer.length; i++) {
-        /* imageContainer[i] += offsetTimer * i;
-      was trying to add the offset to imageContainer[i] which is DOM element
-      Was intending to modify the delay for each element in the array
-      to fix, needed to create a variable to store the updated delay */
-        const updatedDelay = offsetTimer * i;
+//     const imageUrls = [
+//       "../slot-machine-effect-alpha/imgs/rock-final.png",
+//       "../slot-machine-effect-alpha/imgs/hand-final.png",
+//       "../slot-machine-effect-alpha/imgs/scissors-final.png",
+//     ];
+//     const displayTime = 100;
+//     const repeatForLoop = () => {
+//       for (let i = 0; i < imageContainer.length; i++) {
+//         /* imageContainer[i] += offsetTimer * i;
+//       was trying to add the offset to imageContainer[i] which is DOM element
+//       Was intending to modify the delay for each element in the array
+//       to fix, needed to create a variable to store the updated delay */
+//         const updatedDelay = offsetTimer * i;
 
-        //add variable "numLoops" that determine # of loops for each index
-        const numLoops = i + 5;
+//         //add variable "numLoops" that determine # of loops for each index
+//         const numLoops = i + 5;
 
-        for (let j = 0; j < numLoops * imageUrls.length; j++) {
-          setTimeout(() => {
-            // using modulo operator (%) to cycle through imageUrls arr
-            // declaring variable "imageUrlIndex" to use in place of [j]
-            // ${imageUrls[j]} ---> ${imageUrls[imageUrlIndex]}
-            const imageUrlIndex = j % imageUrls.length;
-            imageContainer[
-              i
-            ].innerHTML = `<img src= "${imageUrls[imageUrlIndex]}">`;
-          }, j * displayTime + updatedDelay);
-        }
-      }
-    };
-    repeatForLoop();
-    //create loop trigger on button click
-  };
+//         for (let j = 0; j < numLoops * imageUrls.length; j++) {
+//           setTimeout(() => {
+//             // using modulo operator (%) to cycle through imageUrls arr
+//             // declaring variable "imageUrlIndex" to use in place of [j]
+//             // ${imageUrls[j]} ---> ${imageUrls[imageUrlIndex]}
+//             const imageUrlIndex = j % imageUrls.length;
+//             imageContainer[
+//               i
+//             ].innerHTML = `<img src= "${imageUrls[imageUrlIndex]}">`;
+//           }, j * displayTime + updatedDelay);
+//         }
+//       }
+//     };
+//     repeatForLoop();
+//     //create loop trigger on button click
+//   };
 
-  const loopTrigger = document.getElementById("loop-trigger");
-  loopTrigger.onclick = img_looping_effect2;
-});
+//   const loopTrigger = document.getElementById("loop-trigger");
+//   loopTrigger.onclick = img_looping_effect2;
+// });
 /*Test Code 2 */
 //
 //
@@ -169,3 +169,52 @@ document.addEventListener("DOMContentLoaded", function () {
   loopTrigger.onclick = img_looping_effect2;
 });
  */
+//
+//
+//
+//
+/*Test Code 4 */
+document.addEventListener("DOMContentLoaded", function () {
+  const img_looping_effect4 = () => {
+    const firstbox = document.getElementById("box-first-child");
+    const secondbox = document.getElementById("box-second-child");
+    const thirdbox = document.getElementById("box-third-child");
+
+    const imageContainer = [firstbox, secondbox, thirdbox];
+    const offsetTimer = 150;
+
+    const imageUrls = [
+      "../slot-machine-effect-alpha/imgs/rock-final.png",
+      "../slot-machine-effect-alpha/imgs/hand-final.png",
+      "../slot-machine-effect-alpha/imgs/scissors-final.png",
+    ];
+    const displayTime = 100;
+    const repeatForLoop = () => {
+      for (let i = 0; i < imageContainer.length; i++) {
+        const updatedDelay = offsetTimer * i;
+
+        const numLoops = i + 5;
+        const imgArrLength = imageUrls.length;
+        const targetIndex = 1;
+
+        for (let j = 0; j < imgArrLength * numLoops; j++) {
+          setTimeout(() => {
+            const currentImageUrlIndex = j % imgArrLength;
+            imageContainer[i].innerHTML = `<img src= "${
+              imageUrls[(currentImageUrlIndex + targetIndex) % imgArrLength]
+            }">`;
+          }, j * displayTime + updatedDelay);
+        }
+      }
+    };
+    repeatForLoop();
+  };
+
+  const loopTrigger = document.getElementById("loop-trigger");
+  loopTrigger.onclick = img_looping_effect4;
+});
+/*Test Code 4 */
+//
+//
+//
+//
