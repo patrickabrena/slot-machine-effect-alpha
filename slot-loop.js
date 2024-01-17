@@ -12,39 +12,39 @@
 //
 //
 /*Test Code 1 */
-const img_looping_effect = () => {
-  const imageUrls = [
-    "../test-rock-png/imgs/rock-final.png",
-    "../test-rock-png/imgs/hand-final.png",
-    "../test-rock-png/imgs/scissors-final.png",
-  ];
+// const img_looping_effect = () => {
+//   const imageUrls = [
+//     "../test-rock-png/imgs/rock-final.png",
+//     "../test-rock-png/imgs/hand-final.png",
+//     "../test-rock-png/imgs/scissors-final.png",
+//   ];
 
-  const displayImages = () => {
-    const firstbox = document.getElementById("box-first-child");
-    const secondbox = document.getElementById("box-second-child");
-    const thirdbox = document.getElementById("box-third-child");
+//   const displayImages = () => {
+//     const firstbox = document.getElementById("box-first-child");
+//     const secondbox = document.getElementById("box-second-child");
+//     const thirdbox = document.getElementById("box-third-child");
 
-    imageContainer = [firstbox, secondbox, thirdbox];
+//     imageContainer = [firstbox, secondbox, thirdbox];
 
-    const displayTime = 500;
+//     const displayTime = 500;
 
-    //iterate through imageUrls Array
-    for (let i = 0; i < imageUrls.length; i++) {
-      setTimeout(() => {
-        //displays the image
-        for (let j = 0; j < imageContainer.length; j++) {
-          imageContainer[j].innerHTML = `<img src="${
-            imageUrls[i]
-          }" alt="Image ${i + 1}">`;
-        }
-      }, i * displayTime);
-    }
-  };
-  //create loop trigger on button click
-  const loopTrigger = document.getElementById("loop-trigger");
-  loopTrigger.onclick = displayImages;
-  //   window.onload = displayImages;
-};
+//     //iterate through imageUrls Array
+//     for (let i = 0; i < imageUrls.length; i++) {
+//       setTimeout(() => {
+//         //displays the image
+//         for (let j = 0; j < imageContainer.length; j++) {
+//           imageContainer[j].innerHTML = `<img src="${
+//             imageUrls[i]
+//           }" alt="Image ${i + 1}">`;
+//         }
+//       }, i * displayTime);
+//     }
+//   };
+//   //create loop trigger on button click
+//   const loopTrigger = document.getElementById("loop-trigger");
+//   loopTrigger.onclick = displayImages;
+//   //   window.onload = displayImages;
+// };
 // img_looping_effect();
 /*Test Code 1 */
 //
@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const offsetTimer = 150;
 
     const imageUrls = [
-      "../test-rock-png/imgs/rock-final.png",
-      "../test-rock-png/imgs/hand-final.png",
-      "../test-rock-png/imgs/scissors-final.png",
+      "../slot-machine-effect-alpha/imgs/rock-final.png",
+      "../slot-machine-effect-alpha/imgs/hand-final.png",
+      "../slot-machine-effect-alpha/imgs/scissors-final.png",
     ];
     const displayTime = 100;
     const repeatForLoop = () => {
