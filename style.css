@@ -62,6 +62,10 @@ img {
 
 button {
   font-family: "Pixelify Sans";
+  border-radius: 1px;
+  outline: none;
+
+  color: black;
   padding: 5%;
   margin: 3%;
 }
