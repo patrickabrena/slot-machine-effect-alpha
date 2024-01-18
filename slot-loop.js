@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //
 //
 //
-/*Test Code 6 */
+/*Test Code 6 -  */
 document.addEventListener("DOMContentLoaded", function () {
   const img_looping_effect5 = () => {
     const firstbox = document.getElementById("box-first-child");
@@ -272,20 +272,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const thirdbox = document.getElementById("box-third-child");
 
     const imageContainer = [firstbox, secondbox, thirdbox];
-    const offsetTimer = 150;
+    const offsetTimer = 100;
 
     const imageUrls = [
       "../slot-machine-effect-alpha/imgs/rock-final.png",
       "../slot-machine-effect-alpha/imgs/hand-final.png",
       "../slot-machine-effect-alpha/imgs/scissors-final.png",
     ];
-    const displayTime = 100;
+    const displayTime = 110;
 
     const repeatForLoop = (targetIndex) => {
       for (let i = 0; i < imageContainer.length; i++) {
         const updatedDelay = offsetTimer * i;
 
-        const numLoops = i + 5;
+        const numLoops = i + 3;
         const imgArrLength = imageUrls.length;
 
         for (let j = 0; j < imgArrLength * numLoops; j++) {
@@ -320,5 +320,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   img_looping_effect5(); // Call the function to set up the event handler
 });
-
 /*Test Code 6 */

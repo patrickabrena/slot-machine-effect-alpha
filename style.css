@@ -3,18 +3,32 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
+  background-color: #222222;
+  font-family: "Pixelify Sans";
 }
-
+.threeboxes-container,
 .container,
 .threeboxes {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  height: 100vh;
+  justify-content: center;
+  /* height: 100vh; */
   width: 100vw;
   padding: 1% 0%;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+}
+.threeboxes-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .box {
@@ -42,16 +56,24 @@ img {
 .buttons {
   display: flex;
   flex-direction: row;
+  margin: 1%;
+  justify-content: center;
 }
 
 button {
-  padding: 1%;
-  margin: 1%;
+  font-family: "Pixelify Sans";
+  padding: 5%;
+  margin: 3%;
+}
+a {
+  font-family: "Pixelify Sans";
+  text-decoration: none;
+  color: antiquewhite;
 }
 
 @media screen and (max-width: 420px) {
   .box {
-    width: 23%;
-    padding: 23%;
+    height: 15%;
+    padding: 15%;
   }
 }
